@@ -1,17 +1,16 @@
 extends layout.pug 
 
 block number1 
-    if  error 
-        p Please fill the input
-    if  success  
-        p Note is added 
-    form.form(action="/add" method="POST")
-        input.input(type="text" placeholder="Add your tod description here..." name="tod")
+    if error 
+        p Please fill input
+    if success  
+        p Added 
+    form.form(action='/add' method='POST')
+        input(type="text" placeholder='Add your todo description here..' name='todo')
         button.btn Add 
-        div.todos
+    div.todos
         if todos.length 
             each todo in todos 
                 p.todo #{ todo.description }
         else 
-            p.todo No any todo available   
-               
+            p.todo No any data available 

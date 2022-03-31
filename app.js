@@ -8,15 +8,16 @@ const app =  express()
 //node libs
 const fs = require('fs')
 
-const PORT = 8000
+const PORT = 4050
+//letPORT = process.env.PORT || 8000
 
 app.set('view engine', 'pug')
 
 app.use('/static', express.static('public'))
-app.use(express.urlencoded({ extended: false}))
+app.use(express.urlencoded({ extended: false }))
 
 
-//http://localhost:8000
+//http://localhost:4050
 app.get('/', (req, res) => {
     fs.readFile('./data/todos.json', (err, data) => {
         if(err) throw err
@@ -82,5 +83,5 @@ app.listen(PORT, (err) => {
 
 
 function id () {
-    return '_' + Math.random().toString(36).substr(2, 9);
+    return '_' + Math.random().toString(36).substring(2, 9);
   }
