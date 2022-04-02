@@ -2,9 +2,9 @@ extends layout.pug
 
 block number1 
     if error 
-        p Please fill input
+        p.error Please fill input
     if success  
-        p Added 
+        p.success Added 
     form.form(action='/add' method='POST')
         input(type="text" placeholder='Add your todo description here..' name='todo')
         button.btn Add 
