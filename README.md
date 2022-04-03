@@ -5,7 +5,7 @@ This application allows users to add, update, delete and save tasks
 #### Instructions
 1. Download the source code
 ```
-git clone [url to github repo]
+git clone https://github.com/wiutstudent00012370/Basic-task-manager-.git
 
 ```
 or just download the *.zip file
@@ -25,4 +25,4 @@ node app
 - pug
 #### Link to github repository
 
-[url to github repo]
+https://github.com/wiutstudent00012370/Basic-task-manager-.git
