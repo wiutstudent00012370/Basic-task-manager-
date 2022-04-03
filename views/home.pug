@@ -1,16 +1,31 @@
 extends layout.pug 
 
 block number1 
+
     if error 
         p.error Please fill input
     if success  
-        p.success Added 
+        p.success Added
+    
+    
+    if deleted 
+        p.success Deleted  
     form.form(action='/add' method='POST')
-        input(type="text" placeholder='Add your todo description here..' name='todo')
+        input(type='text' placeholder='Add full name of the employee' name='todo')
+    
+        
         button.btn Add 
     div.todos
         if todos.length 
             each todo in todos 
-                p.todo #{ todo.description }
+                p.todo 
+                    if todo.done 
+                        a.done(href=`/${todo}/update`) #{ todo.description }
+                    else 
+                        a.undone(href=`/${todo}/update`) #{ todo.description }
+                    
+                    
+                    a(href=`/${ todo.id }/delete`) Delete
+                 
         else 
             p.todo No any data available 

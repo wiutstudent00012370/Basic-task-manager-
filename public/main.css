@@ -28,7 +28,7 @@
 .input {
     display: inline-block;
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 6rem;
     width: 80%;
     border: 1 px solid #ccc;
 }
@@ -55,6 +55,8 @@
 }
 
 .todo {
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     font-size: 1.5rem;
     border-bottom: 1px dotted #ccc;
@@ -63,3 +65,37 @@
 .todo:hover {
     background: #eee;
 }
+
+.error,
+.success {
+    text-align: center;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.error {
+    color: red;
+    border-color: black;
+}
+.success {
+    color: green;
+    border-color: black;
+}
+.delete {
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: tomato;
+    color: #ccc;
+    margin-left: 10px;
+}
+.done,
+.undone {
+    text-decoration: none;
+
+}
+.done {
+    text-decoration: line-through;
+
+}
+
